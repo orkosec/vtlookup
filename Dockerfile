@@ -1,6 +1,6 @@
 FROM golang:1.19.2-bullseye
 
-ENV APP_NAME vtchecker
+ENV APP_NAME vtlookup
 
 WORKDIR /app
 
@@ -15,4 +15,4 @@ RUN go build -o /$APP_NAME
 
 EXPOSE 8080
 
-CMD [ "/vtchecker" ]
+CMD [ "/vtlookup" ]
