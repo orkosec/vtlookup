@@ -38,3 +38,13 @@ You can also use `vtlookup` as a command-line tool by providing a list of hashes
 ```bash
 go run main.go -file hash.txt
 ```
+
+## Docker
+Alternatively, you can use Docker to build and run vtlookup. Build the Docker image:
+
+```bash
+docker build -t vtlookup .
+docker run -itd -e VIRUSTOTAL_API_KEY=`echo -n $VIRUSTOTAL_API_KEY` -p 8080:8080 vtlookup
+```
+
+
