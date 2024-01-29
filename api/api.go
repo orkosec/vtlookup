@@ -166,7 +166,7 @@ func LoadHash(filename string) {
 	wg := sync.WaitGroup{}
 
 	for _, v := range hashSlice {
-		v := v
+		//v := v shadowing is not necessary as already passing values in GetObject
 		wg.Add(1)
 		go GetObject(v, resultChan, errChan, config)
 	}
