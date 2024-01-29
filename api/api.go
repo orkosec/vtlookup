@@ -166,6 +166,7 @@ func LoadHash(filename string) {
 	wg := sync.WaitGroup{}
 
 	for _, v := range hashSlice {
+		v := v
 		wg.Add(1)
 		go GetObject(v, resultChan, errChan, config)
 	}
