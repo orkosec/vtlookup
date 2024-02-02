@@ -172,6 +172,7 @@ func LoadHash(filename string) {
 	}
 
 	for i := 0; i < len(hashSlice); i++ {
+		time.Sleep(10 * time.Millisecond)
 		go func() {
 			select {
 			case result := <-resultChan:
